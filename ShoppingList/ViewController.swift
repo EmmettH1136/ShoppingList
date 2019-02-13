@@ -15,14 +15,14 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         tableView.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
-        let item1 = Item("Milk")
-        let item2 = Item("Eggs")
+        let item1 = Item("Milk", 2)
+        let item2 = Item("Eggs", 3)
         items = [item1, item2]
     }
 
     @IBAction func addNewItemButtonPressed(_ sender: Any) {
         if let newItemName = newItemTextField.text, newItemName != "" {
-            let newItem = Item(newItemName)
+            let newItem = Item(newItemName, 1)
             items.append(newItem)
             tableView.reloadData()
         }

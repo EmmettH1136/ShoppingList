@@ -21,14 +21,16 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
 
     @IBAction func addNewItemButtonPressed(_ sender: Any) {
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return items.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")!
-        cell.textLabel?.text = "Hello"
+        let currentItemName = items[indexPath.row].name
+        cell.textLabel?.text = currentItemName
         return cell
     }
 }

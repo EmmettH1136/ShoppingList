@@ -21,17 +21,24 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
 
     @IBAction func addNewItemButtonPressed(_ sender: Any) {
-        
+        if let newItemName = newItemTextField.text, newItemName != "" {
+            let newItem = Item(newItemName)
+            items.append(newItem)
+            tableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")!
-        let currentItemName = items[indexPath.row].name
-        cell.textLabel?.text = currentItemName
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") {
+            let currentItemName = items[indexPath.row].name
+            cell.textLabel?.text = currentItemName
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
 }
 

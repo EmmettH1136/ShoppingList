@@ -10,11 +10,14 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var newItemTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    
+    var items: [Item] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
+        let item1 = Item("Milk")
+        let item2 = Item("Eggs")
+        items = [item1, item2]
     }
 
     @IBAction func addNewItemButtonPressed(_ sender: Any) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		406D6D822215DE14002D151E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406D6D812215DE14002D151E /* SecondViewController.swift */; };
 		5F830D412214836A00DB8D52 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F830D402214836A00DB8D52 /* Item.swift */; };
 		5FDC148D220DF3E100E30CEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC148C220DF3E100E30CEE /* AppDelegate.swift */; };
 		5FDC148F220DF3E100E30CEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC148E220DF3E100E30CEE /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		406D6D812215DE14002D151E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		5F830D402214836A00DB8D52 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		5FDC1489220DF3E100E30CEE /* ShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FDC148C220DF3E100E30CEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				5FDC148C220DF3E100E30CEE /* AppDelegate.swift */,
 				5FDC148E220DF3E100E30CEE /* ViewController.swift */,
 				5FDC1490220DF3E200E30CEE /* Main.storyboard */,
+				406D6D812215DE14002D151E /* SecondViewController.swift */,
 				5F830D402214836A00DB8D52 /* Item.swift */,
 				5FDC1493220DF3E300E30CEE /* Assets.xcassets */,
 				5FDC1495220DF3E300E30CEE /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				406D6D822215DE14002D151E /* SecondViewController.swift in Sources */,
 				5FDC148F220DF3E100E30CEE /* ViewController.swift in Sources */,
 				5F830D412214836A00DB8D52 /* Item.swift in Sources */,
 				5FDC148D220DF3E100E30CEE /* AppDelegate.swift in Sources */,

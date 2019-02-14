@@ -34,10 +34,19 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") {
             let currentItemName = items[indexPath.row].name
+            let currentItemQuantity = items[indexPath.row].quantity
             cell.textLabel?.text = currentItemName
+            cell.detailTextLabel?.text = "Quantity: \(currentItemQuantity)"
             return cell
         } else {
             return UITableViewCell()
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc = segue.destination as! SecondViewController
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let item = items[indexPath.row]
+            nvc.passedItem = item
         }
     }
 }

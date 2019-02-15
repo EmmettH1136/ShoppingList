@@ -22,8 +22,17 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     @IBAction func addNewItemButtonPressed(_ sender: Any) {
         if let newItemName = newItemTextField.text, newItemName != "" {
-            let newItem = Item(newItemName, 1)
-            items.append(newItem)
+            var doop = false
+            for x in items {
+                if x.name == newItemName {
+                    doop = true
+                    x.quantity += 1
+                }
+            }
+            if doop == false {
+                let newItem = Item(newItemName, 1)
+                items.append(newItem)
+            }
             tableView.reloadData()
         }
     }
@@ -46,7 +55,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         let nvc = segue.destination as! SecondViewController
         if let indexPath = tableView.indexPathForSelectedRow {
             let item = items[indexPath.row]
+            let number = indexPath.row
             nvc.passedItem = item
+            nvc.passedNumber = number
         }
     }
 }

@@ -9,9 +9,12 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    @IBOutlet weak var removeButton: UIButton!
     @IBOutlet weak var label: UILabel!
     var passedItem : Item!
-    
+    var passedNumber : Int!
+    var didDelete = false
+    var numberToDelete : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = passedItem.name
@@ -20,7 +23,7 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
